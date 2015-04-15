@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="mycanvas" width="300" height="300"></canvas>
+	<script>
+	var canvas = document.getElementById("mycanvas");
+	var ctx = canvas.getContext("2d");
+	
+	ctx.strokeStyle = "orange";
+	ctx.lineWidth = 3;
+
+	//Inicia o Caminho(Apaga os desenhos anteriores)
+	ctx.beginPath();
+	
+	//Cria o Arco em Path
+	ctx.arc(50, 50, 40, 90*Math.PI/180, 270*Math.PI/180, false);
+
+	//Preenche o Arco
+	ctx.fill();
+
+	//Contorna o Arco
+	ctx.stroke();
+
+	
+
+	//segundo arco
+	ctx.beginPath();
+	ctx.arc(150, 50, 40, 90*Math.PI/180, 270*Math.PI/180, true);
+	ctx.fill();
+	ctx.stroke();
+
+
+
+	//arco compĺeto
+	ctx.beginPath();
+	ctx.arc(250, 50, 40, 0, 2*Math.PI);
+	ctx.fill();
+	ctx.stroke();
+
+
+	</script>
+</body>
+</html>
